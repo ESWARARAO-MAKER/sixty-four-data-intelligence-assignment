@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { DataComponent } from './components/DataComponent';
+import { SideNavbar } from './components/SideNavbar';
 
 function App() {
+  const [isOpenSidebar, setIsOpenSidebar] = useState(true)
+
+  useEffect(() => {
+      const handleResize = () => {
+          const screenWidth = window.innerWidth
+          setIsOpenSidebar(screenWidth > 770)
+      }
+      window.addEventListener("resize", handleResize)
+      handleResize()
+      return () => {window.removeEventListener("resize", handleResize)}
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isOpenSidebar && <SideNavbar/>}
+      <DataComponent/>
     </div>
   );
 }

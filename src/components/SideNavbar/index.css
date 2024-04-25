@@ -1,0 +1,36 @@
+.side-navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 6%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    background-color: white;
+}
+.profile-options-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 90px;
+}
+.profile-options-container>span{
+    background-color: #13103b;
+    border-radius: 50%;
+    color: white;
+    padding: 5px;
+    font-weight: 700;
+}
+.options-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.options-container>span{
+    font-size: 18px;
+}
+.side-navbar>span{
+    font-size: 18px;
+}
