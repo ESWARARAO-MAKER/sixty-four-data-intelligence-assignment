@@ -1,4 +1,4 @@
-import { countries, libraryData, plansList, releasesData } from '../../data'
+import { countries, libraryData, releasesData } from '../../data'
 import { MainNavbar } from '../MainNavbar'
 import './index.css'
 import { PiNoteDuotone } from "react-icons/pi";
